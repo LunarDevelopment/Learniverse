@@ -1,0 +1,26 @@
+{
+  "generator-m": {
+    "answers": {
+      "appName": "Learniverse",
+      "appId": "com.lunardevelopment.learniverse",
+      "bowerPackages": [
+        "angular-dynamic-locale#~0.1.27",
+        "angular-translate#~2.7.0",
+        "angular-translate-loader-static-files#~2.7.0",
+        "angular-localForage#~1.2.2"
+      ],
+      "platforms": [
+        "android"
+      ],
+      "plugins": [
+        "cordova-plugin-device",
+        "cordova-plugin-dialogs",
+        "cordova-plugin-inappbrowser",
+        "cordova-plugin-network-information",
+        "cordova-plugin-splashscreen",
+        "cordova-plugin-statusbar"
+      ],
+      "appModule": "Learniverse"
+    }
+  }
+}
