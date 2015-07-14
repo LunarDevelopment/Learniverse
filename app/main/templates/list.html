@@ -1,7 +1,20 @@
 <ion-view view-title="List">
-  <ion-content>
-
-    <!-- content goes here -->
+  <ion-content ng-init="list.loadImages();">
+    <div class="row" ng-repeat="image in list.images" ng-if="$index % 4 === 0">
+      <div class="col col-25" ng-if="$index < list.images.length">
+        <img ng-src="{{list.images[$index].src}}" width="100%" />
+      </div>
+      <div class="col col-25" ng-if="$index + 1 < list.images.length">
+        <img ng-src="{{list.images[$index + 1].src}}" width="100%" />
+      </div>
+      <div class="col col-25" ng-if="$index + 2 < list.images.length">
+        <img ng-src="{{list.images[$index + 2].src}}" width="100%" />
+      </div>
+      <div class="col col-25" ng-if="$index + 3 < list.images.length">
+        <img ng-src="{{list.images[$index + 3].src}}" width="100%" />
+      </div>
+    </div>
+    <!-- content goes here 
     <ion-list>
       <ion-item
         class="item-remove-animate item-avatar item-icon-right"
@@ -13,6 +26,6 @@
         <i class="icon ion-chevron-right icon-accessory"></i>
       </ion-item>
     </ion-list>
-
+-->
   </ion-content>
 </ion-view>

@@ -24,7 +24,7 @@ angular.module('main', [
         views: {
           'pageContent': {
             templateUrl: 'main/templates/list.html',
-            // controller: '<someCtrl> as ctrl'
+            controller: 'ListCtrl as list'
           }
         }
       })
