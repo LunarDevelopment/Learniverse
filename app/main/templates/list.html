@@ -1,5 +1,5 @@
 <ion-view view-title="List">
-  <ion-content ng-init="list.loadImages();">
+  <ion-content class="dark-bg" ng-init="list.loadImages();">
     <div class="row" ng-repeat="image in list.images" ng-if="$index % 4 === 0">
       <div class="col col-25" ng-if="$index < list.images.length">
         <img ng-src="{{list.images[$index].src}}" width="100%" />

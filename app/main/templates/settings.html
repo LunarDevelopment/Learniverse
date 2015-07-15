@@ -1,0 +1,38 @@
+<ion-view title="Settings">
+  <ion-nav-buttons side="left">
+    <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+  </ion-nav-buttons>
+  <ion-content class="">
+
+
+    <div class="card">
+      <div class="item item-divider">
+        Enable Compass Mode
+      </div>
+      <div class="item item-text-wrap">
+        If enabled in Discovery map orientation changes based on orientation of phone. 
+        <ion-toggle ng-model="compass" toggle-class="toggle-balanced"></ion-toggle>
+      </div>
+    </div>
+    <div class="card">
+      <div class="item item-divider">
+        Discover In Background
+      </div>
+      <div class="item item-text-wrap">
+        Allow capsules to be discovered in the background so you can be alerted in their presence. 
+        <ion-toggle ng-model="background" toggle-class="toggle-calm"></ion-toggle>
+      </div>
+    </div>
+    <div class="card">
+      <div class="item item-divider">
+        Poll Interval
+      </div>
+      <div class="item item-text-wrap">
+        Set the interval Capsules.io will poll to see if there are capsules in your area.  
+        <button class="button button-small button-full button-positive">
+          Set Interval
+        </button>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

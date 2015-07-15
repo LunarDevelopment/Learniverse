@@ -5,20 +5,20 @@ angular.module('main', [
   'ui.router',
   // TODO: load other modules selected during generation
 ])
-.config(function ($stateProvider, $urlRouterProvider) {
+  .config(function ($stateProvider, $urlRouterProvider) {
 
-  console.log('Allo! Allo from your module: ' + 'main');
+    console.log('Allo! Allo from your module: ' + 'main');
 
-  // ROUTING with ui.router
-  $urlRouterProvider.otherwise('/main/list');
-  $stateProvider
+    // ROUTING with ui.router
+    $urlRouterProvider.otherwise('/main/list');
+    $stateProvider
     // this state is placed in the <ion-nav-view> in the index.html
-    .state('main', {
-      url: '/main',
-      abstract: true,
-      templateUrl: 'main/templates/menu.html',
-      controller: 'MenuCtrl as menu'
-    })
+      .state('main', {
+        url: '/main',
+        abstract: true,
+        templateUrl: 'main/templates/menu.html',
+        controller: 'MenuCtrl as menu'
+      })
       .state('main.list', {
         url: '/list',
         views: {
@@ -33,7 +33,7 @@ angular.module('main', [
         views: {
           'pageContent': {
             templateUrl: 'main/templates/list-detail.html',
-            // controller: '<someCtrl> as ctrl'
+            controller: 'DetailCtrl as detail'
           }
         }
       })
@@ -45,5 +45,40 @@ angular.module('main', [
             controller: 'DebugCtrl as ctrl'
           }
         }
+      })
+      .state('main.about', {
+        url: '/about',
+        views: {
+          'pageContent': {
+            templateUrl: 'main/templates/about.html',
+            controller: 'AboutCtrl as about'
+          }
+        }
+      })
+      .state('main.settings', {
+        url: '/settings',
+        views: {
+          'pageContent': {
+            templateUrl: 'main/templates/settings.html',
+            controller: 'SettingsCtrl as settings'
+          }
+        }
+      })
+      .state('main.feedback', {
+        url: '/feedback',
+        views: {
+          'pageContent': {
+            templateUrl: 'main/templates/feedback.html',
+            controller: 'FeedbackCtrl as feedback'
+          }
+        }
       });
-});
+  })
+  .run(function ($ionicPlatform, $cordovaStatusbar) {
+    $ionicPlatform.ready(function() {
+      $cordovaStatusbar.overlaysWebView(true);
+      //$cordovaStatusbar.style(1); //Light
+      //$cordovaStatusbar.style(2); //Black, transulcent
+      $cordovaStatusbar.style(3); //Black, opaque
+    });
+  });

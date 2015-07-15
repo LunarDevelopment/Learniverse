@@ -20,11 +20,7 @@
   </head>
   <body ng-app="Learniverse">
 
-    <!-- the nav bar will be updated as we navigate between views -->
-    <!-- <ion-nav-bar> can be removed when using sidemenu (contained in menu.html) -->
-    <ion-nav-bar class="bar-balanced">
-      <ion-nav-back-button></ion-nav-back-button>
-    </ion-nav-bar>
+
     <!-- the current view will be rendered in the <ion-nav-view> directive -->
     <ion-nav-view></ion-nav-view>
 
@@ -52,9 +48,14 @@
     <!-- inject:js -->
     <script src="main/main.js"></script>
     <script src="main/services/main-serv.js"></script>
+    <script src="main/services/localstorage-serv.js"></script>
+    <script src="main/controllers/settings-ctrl.js"></script>
     <script src="main/controllers/menu-ctrl.js"></script>
     <script src="main/controllers/list-ctrl.js"></script>
+    <script src="main/controllers/feedback-ctrl.js"></script>
+    <script src="main/controllers/detail-ctrl.js"></script>
     <script src="main/controllers/debug-ctrl.js"></script>
+    <script src="main/controllers/about-ctrl.js"></script>
     <script src="main/constants/config-const.js"></script>
     <script src="app.js"></script>
     <!-- endinject -->
